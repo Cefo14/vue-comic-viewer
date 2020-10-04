@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/vue-comic-viewer/precache-manifest.2affeebfe6fb26f20cbf2a6a9c0c9712.js"
+  "/vue-comic-viewer/precache-manifest.db37569527225f095dcd850dfec1990a.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "vue-comic-viewer"});

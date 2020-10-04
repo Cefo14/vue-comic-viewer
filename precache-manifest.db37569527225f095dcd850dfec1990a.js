@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "25c21d2299909d4ff122",
+    "revision": "8366ae19987e2b003d27",
     "url": "/vue-comic-viewer/css/app.2aa78349.css"
   },
   {
-    "revision": "820dde0aa234d590632d",
+    "revision": "d0c3a55ee31cb378e22a",
     "url": "/vue-comic-viewer/css/chunk-12fb1410.8ffc3cb2.css"
   },
   {
@@ -32,7 +32,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vue-comic-viewer/fonts/materialdesignicons-webfont.5d6f62d2.eot"
   },
   {
-    "revision": "8e4079255d3db83745a59d697f5d4ecc",
+    "revision": "5f3f85b74f3bdf945b12d52af7d7e9b6",
     "url": "/vue-comic-viewer/index.html"
   },
   {
@@ -40,12 +40,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vue-comic-viewer/js/Promise.min.js"
   },
   {
-    "revision": "25c21d2299909d4ff122",
-    "url": "/vue-comic-viewer/js/app.aa31e418.js"
+    "revision": "8366ae19987e2b003d27",
+    "url": "/vue-comic-viewer/js/app.55237d6c.js"
   },
   {
-    "revision": "820dde0aa234d590632d",
-    "url": "/vue-comic-viewer/js/chunk-12fb1410.e5d04925.js"
+    "revision": "d0c3a55ee31cb378e22a",
+    "url": "/vue-comic-viewer/js/chunk-12fb1410.519049c7.js"
   },
   {
     "revision": "56d61a74acebe2103582",
