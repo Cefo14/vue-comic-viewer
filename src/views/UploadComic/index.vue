@@ -1,50 +1,31 @@
 <template>
-  <div class="upload-comic__container">
-    <h1 class="upload-comic__title">
-        Comic Reader
-    </h1>
-    <v-alert
-      dense
-      title
-      color="red"
-      class="upload-comic__alert-error"
-      v-show="error"
-    >
-      {{ error }}
-    </v-alert>
-    <v-card
-      class="upload-comic__card"
-      :loading="isLoading"
-      :disabled="isLoading"
-    >
-      <DropZone
-        :accept="accept"
-        @onDrop="extractPages"
+  <v-container class="upload-comic__v-container">
+    <div class="upload-comic__container">
+      <h1 class="upload-comic__title">
+          Comic Viewer
+      </h1>
+      <v-card
+        class="upload-comic__card"
+        :loading="isLoading"
+        :disabled="isLoading"
       >
-        <h2 class="upload-comic__drop-zone_message">
-          {{ dropZoneMessage }}
-        </h2>
-      </DropZone>
-    </v-card>
-  </div>
+        <DropZone
+          :accept="accept"
+          @onDrop="addFiles"
+          multiple
+        >
+          <h2 class="upload-comic__drop-zone_message">
+            {{ dropZoneMessage }}
+          </h2>
+        </DropZone>
+      </v-card>
+    </div>
+  </v-container>
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
 import DropZone from '../../components/DropZone';
-import UncompressFactory from '../../utils/uncompress/UncompressFactory';
-
-/**
- * @param {File[]} pages
- * @returns {File[]}
- */
-const sortPagesByName = (pages) => {
-  const _pages = [...pages];
-  return _pages.sort((a, b) => {
-    if (a.name > b.name) return 1;
-    if (a.name < b.name) return -1;
-    return 0;
-  });
-};
 
 export default {
   name: 'UploadComic',
@@ -57,33 +38,20 @@ export default {
     return {
       isLoading: false,
       accept: ['.cbz', '.cbr', '.pdf'],
-      error: '',
     };
   },
 
   methods: {
+    ...mapMutations('files', { _addFiles: 'addFiles' }),
+
     /**
      * @param {File[]} files
      */
-    async extractPages(files) {
-      this.isLoading = true;
-      const [file] = files;
-
-      try {
-        const uncompressFactory = new UncompressFactory();
-        const uncompress = await uncompressFactory.create(file);
-        const pages = await uncompress.extract();
-        const sortedPages = sortPagesByName(pages);
-        this.$emit('onExtractPages', sortedPages);
-      }
-
-      catch (e) {
-        this.error = e.message;
-      }
-
-      finally {
-        this.isLoading = false;
-      }
+    addFiles(files) {
+      this._addFiles(files);
+      this.$router.push({
+        name: 'viewer',
+      });
     },
   },
 
@@ -96,7 +64,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+  .upload-comic__v-container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 
   .upload-comic__container {
     display: flex;
@@ -107,11 +78,6 @@ export default {
     flex-direction: column;
     width: 100%;
     height: 100vh;
-
-    & .upload-comic__title,
-    & .upload-comic__drop-zone_message {
-      font-family: 'Bangers', cursive;
-    }
   }
 
   .upload-comic__title {
@@ -140,13 +106,5 @@ export default {
     @media (max-width: 768px) {
       font-size: 2rem;
     }
-  }
-
-  .upload-comic__alert-error {
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    margin-bottom: 8px;
-    text-transform: capitalize;
   }
 </style>

@@ -4,5 +4,5 @@ module.exports = {
     config.plugins.delete('prefetch');
     config.plugins.delete('preload');
   },
-  publicPath: '/vue-comic-viewer',
+  publicPath: process.env.VUE_APP_ROUTE,
 };

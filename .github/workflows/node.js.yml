@@ -13,6 +13,8 @@ jobs:
         run: |
           npm install
           npm run build
+        env:
+          VUE_APP_ROUTE: /vue-comic-viewer
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
