@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8366ae19987e2b003d27",
+    "revision": "f6a95623f452bf4de6f3",
     "url": "/vue-comic-viewer/css/app.2aa78349.css"
   },
   {
-    "revision": "d0c3a55ee31cb378e22a",
-    "url": "/vue-comic-viewer/css/chunk-12fb1410.8ffc3cb2.css"
+    "revision": "1bf6faf5d17cc1b30f65",
+    "url": "/vue-comic-viewer/css/chunk-0b53c962.8ffc3cb2.css"
   },
   {
-    "revision": "56d61a74acebe2103582",
+    "revision": "ee33b006fc3e96c5c081",
     "url": "/vue-comic-viewer/css/chunk-6dd4050b.8801075b.css"
   },
   {
-    "revision": "324c6d30d524e130bc21",
-    "url": "/vue-comic-viewer/css/chunk-vendors.842f91a6.css"
+    "revision": "0de5c7f71c25d03662d1",
+    "url": "/vue-comic-viewer/css/chunk-vendors.baac3f2a.css"
   },
   {
     "revision": "1e9e35036ef9c06cdd99d580171d7f2a",
@@ -32,7 +32,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vue-comic-viewer/fonts/materialdesignicons-webfont.5d6f62d2.eot"
   },
   {
-    "revision": "5f3f85b74f3bdf945b12d52af7d7e9b6",
+    "revision": "ede24b971f2a64f66616b82ad5bb3241",
     "url": "/vue-comic-viewer/index.html"
   },
   {
@@ -40,20 +40,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vue-comic-viewer/js/Promise.min.js"
   },
   {
-    "revision": "8366ae19987e2b003d27",
-    "url": "/vue-comic-viewer/js/app.55237d6c.js"
+    "revision": "f6a95623f452bf4de6f3",
+    "url": "/vue-comic-viewer/js/app.c0d90202.js"
   },
   {
-    "revision": "d0c3a55ee31cb378e22a",
-    "url": "/vue-comic-viewer/js/chunk-12fb1410.519049c7.js"
+    "revision": "1bf6faf5d17cc1b30f65",
+    "url": "/vue-comic-viewer/js/chunk-0b53c962.4f2a9929.js"
   },
   {
-    "revision": "56d61a74acebe2103582",
-    "url": "/vue-comic-viewer/js/chunk-6dd4050b.4e26c9d0.js"
+    "revision": "ee33b006fc3e96c5c081",
+    "url": "/vue-comic-viewer/js/chunk-6dd4050b.f7406daa.js"
   },
   {
-    "revision": "324c6d30d524e130bc21",
-    "url": "/vue-comic-viewer/js/chunk-vendors.23b373fb.js"
+    "revision": "0de5c7f71c25d03662d1",
+    "url": "/vue-comic-viewer/js/chunk-vendors.16837fdf.js"
   },
   {
     "revision": "2cc7b4a189559cfd7ac0c7e30ee3305d",
