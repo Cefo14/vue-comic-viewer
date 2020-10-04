@@ -1,20 +1,14 @@
 <template>
-  <div id="app">
-    <v-app id="inspire">
-      <v-container class="py-0">
-        <ComicViewer />
-      </v-container>
-    </v-app>
-  </div>
+  <v-app id="inspire">
+    <router-view/>
+  </v-app>
 </template>
 
-<script>
-import ComicViewer from './views/ComicViewer';
-
-export default {
-  name: 'App',
-  components: {
-    ComicViewer,
-  },
-};
-</script>
+<style lang="scss" scoped>
+  .v-application {
+    font-family: 'Bangers', cursive;
+    & * {
+      font-family: 'Bangers', cursive;
+    }
+  }
+</style>

@@ -2,8 +2,6 @@ import pdfjs from 'pdfjs-dist';
 import Uncompress from './Uncompress';
 import UncompressError from './UncompressError';
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-
 class UncompressPDF extends Uncompress {
   _pageToCanvas = async (page, scale = 1) => {
     const pageVp = page.getViewport({ scale });
@@ -44,6 +42,7 @@ class UncompressPDF extends Uncompress {
 
   extract = async () => {
     try {
+      pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
       const fileArrayBuffer = await this.file.arrayBuffer();
       const document = await pdfjs.getDocument(fileArrayBuffer).promise;
       const pages = await this._processPages(document);

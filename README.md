@@ -9,9 +9,10 @@ https://cefo14.github.io/vue-comic-viewer/
 # Screenshot Desktop
 [desktop1]: /README/desktop_1.png
 [desktop2]: /README/desktop_2.png
+[desktop3]: /README/desktop_3.png
 
-| ![desktop1]   | ![desktop2]   |
-| ------------- | ------------- |
+| ![desktop1]   | ![desktop2]   | ![desktop3]   |
+| ------------- | ------------- | ------------- |
 
 # Screenshot Mobile
 [mobile1]: /README/mobile_1.jpg
