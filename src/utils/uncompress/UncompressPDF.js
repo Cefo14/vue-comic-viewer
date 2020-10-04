@@ -44,6 +44,7 @@ class UncompressPDF extends Uncompress {
 
   extract = async () => {
     try {
+      pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
       const fileArrayBuffer = await this.file.arrayBuffer();
       const document = await pdfjs.getDocument(fileArrayBuffer).promise;
       const pages = await this._processPages(document);
